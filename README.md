@@ -52,7 +52,7 @@ The task is to build a Python module that implements a socket server that fetche
 
 ### Dependencies
 
-The main external dependency for this project is **pygame**.
+The main external dependency for this project is `pygame`.
 
 
 

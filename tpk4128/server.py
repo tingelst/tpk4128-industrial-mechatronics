@@ -1,53 +1,29 @@
 import socket
-import pygame
-import pygame.camera
-from pygame.locals import *
-import numpy as np
-import pickle
 
-DEVICE = '/dev/video0'
-SIZE = (640, 480)
+class SocketServer(object):
 
-HOST = ''                 # Symbolic name meaning all available interfaces
-PORT = 50007              # Arbitrary non-privileged port
+    def __init__(self, host, port):
+        self._host = host
+        self._port = port
 
+        self._socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self._socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        self._socket.bind((self._host, self._port))
+        self._socket.listen(1)
 
-def camstream():
-    pygame.init()
-    pygame.camera.init()
-    camera = pygame.camera.Camera(DEVICE, SIZE, 'RGB')
-    camera.start()
+        self._conn, self._addr = self._socket.accept()
+        print('Connected by: {}'.format(self._addr))
 
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-    s.bind((HOST, PORT))
-    s.listen(1)
-    conn, addr = s.accept()
-    print('Connected by', addr)
+    def sendall(self, buf):
+        self._conn.sendall(buf)
 
-    while True:
+    def recv(self, size=1024):
+        data = self._conn.recv(size)
+        return data
 
-        data = conn.recv(1024)
-        print(data)
-        if not data:
-            break
+    def __del__(self):
+        self._conn.close()
 
-        buf = camera.get_image()
-        buf = pygame.surfarray.array2d(buf)
-        buf = buf.tostring()
-        sent = 0
-        while buf:
-            bytes_ = conn.send(buf)
-            sent += bytes_
-            buf = buf[bytes_:]
-            print(sent)
-
-    conn.close()
-
-    camera.stop()
-    pygame.quit()
-    return
+        
 
 
-if __name__ == '__main__':
-    camstream()
