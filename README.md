@@ -50,7 +50,7 @@ Introduction to Python programming for the course TPK4128 Industrial Mechatronic
 
 The task is to build a Python module that implements a socket server that fetches images from a webcam and sends it over a TCP/IP or UDP socket when it gets a request from a client.
 
-1) Install Ubuntu in a virtual machine, e.g., VirtualBox
+1) Install Ubuntu in a virtual machine, e.g., VirtualBox.
 2) Mount the the integrated webcam into the Ubuntu VM.
     1) Make sure the virtual machine is not running and your webcam is not being used.
     2) Bring up the main VBox window and in the details tab for your virtual machine click USB.
