@@ -60,7 +60,7 @@ The task is to build a Python module that implements a socket server that fetche
     6) Now click OK and start your VM.
 3) Open a terminal and execute the command `ls /dev`. You should now see `video0` in the output.
 4) Install opencv: `pip install opencv-python`
-5) Implement the `Camera` class in the file `camera_opencv.py`. See [](https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html)
+5) Implement the `Camera` class in the file `camera_opencv.py`. See https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html for a tutorial on how to open a video stream from a webcam.
 6) Implement the `run_client_opencv.py` script, that sends a message over `localhost` to a server implemented in the `run_server_opencv.py` script.
 7) Open a new terminal and execute the `run_server_opencv.py` script.
 8) Open a new terminal and execute the `run_client_opencv.py` script. You should now see a live stream from your webcam.
