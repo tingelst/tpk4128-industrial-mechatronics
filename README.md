@@ -46,7 +46,7 @@ Introduction to Python programming for the course TPK4128 Industrial Mechatronic
 - Inheritance
 - Composition
 
-## Exercise: Building a webcam server
+## Exercise: Building a webcam server using OpenCV and Python
 
 The task is to build a Python module that implements a socket server that fetches images from a webcam and sends it over a TCP/IP or UDP socket when it gets a request from a client.
 
@@ -65,3 +65,5 @@ The task is to build a Python module that implements a socket server that fetche
 7) Open a new terminal and execute the `run_server_opencv.py` script.
 8) Open a new terminal and execute the `run_client_opencv.py` script. You should now see a live stream from your webcam.
 9) If time permits, work together in pairs and try to get the above system to work between two remote machines.
+
+Tip: For an interactive introduction to python, follow the exercises on http://learnpython.org/
