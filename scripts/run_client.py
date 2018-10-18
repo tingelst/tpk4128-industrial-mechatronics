@@ -3,6 +3,7 @@ import time
 import cv2
 import numpy as np
 
+
 def image(rgba):
     blue = np.bitwise_and(np.right_shift(rgba, 0), 0xff)
     green = np.bitwise_and(np.right_shift(rgba, 8), 0xff)
@@ -11,9 +12,10 @@ def image(rgba):
     im = np.stack((blue, green, red, alpha), axis=2) / 255.0
     return im
 
+
 def main():
 
-    client = SocketClient('10.42.0.1', 50007)
+    client = SocketClient('localhost', 50007)
     while True:
         client.sendall(b'Hello World!')
 
@@ -29,6 +31,6 @@ def main():
         if cv2.waitKey(20) == 27:  # Esc: 27
             break
 
+
 if __name__ == '__main__':
     main()
-
