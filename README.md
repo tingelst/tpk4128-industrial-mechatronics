@@ -58,7 +58,7 @@ The task is to build a Python module that implements a socket server that fetche
     4) Click the "Add filter from device" button (the cable with the '+' icon).
     5) Select your device from the list.
     6) Now click OK and start your VM.
-3) Open a terminal and execute the command `ls /dev`. You should now see `video0` in the output.
+3) Open a terminal and execute the command `ls /dev`. You should now see `video0` in the output. Note that you might need to add the camera manually from the top menu: Devices > Webcams > NameOfYourCamera
 4) Install opencv: `pip install opencv-python`
 5) Implement the `Camera` class in the file `camera_opencv.py`. See https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html for a tutorial on how to open a video stream from a webcam.
 6) Implement the `run_client_opencv.py` script, that sends a message over `localhost` to a server implemented in the `run_server_opencv.py` script.
