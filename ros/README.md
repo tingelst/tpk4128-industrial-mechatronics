@@ -99,3 +99,66 @@ Get information aboout a node:
 ```bash
 rostopic info /topic
 ```
+
+### ROS Messages (http://wiki.ros.org/Messages)
+
+
+Nodes communicate with each other by publishing messages to topics. A message is a simple data structure, comprising typed fields. Standard primitive types (integer, floating point, boolean, etc.) are supported, as are arrays of primitive types. Messages can include arbitrarily nested structures and arrays (much like C structs).
+
+- Data structure defining the *type* of a topic
+- Comprised of nested structure of integers, strings, etc, and arrays of objects
+- Defined in *.msg files
+
+See the type of a topic:
+```bash
+rostopic type /topic
+```
+
+Publish a message to a topic:
+```bash
+rostopic pub /topic type args
+```
+
+#### Examples:
+
+`sensor_msgs/Image.msg`:
+
+```bash
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+uint32 height
+uint32 width
+string encoding
+uint8 is_bigendian
+uint32 step
+uint8[] data
+```
+
+`geometry_msgs/Point.msg`:
+```bash
+float64 x
+float64 y
+float64 z
+```
+
+`geometry_msgs/PoseStamped`:
+```bash 
+std_msgs/Header header
+  uint32 seq
+  time stamp
+  string frame_id
+geometry_msgs/Pose pose
+  geometry_msgs/Pose pose
+    float64 x
+    float64 y
+    float64 z
+  geometry_msgs/Quaternion orientation
+    float64 x
+    float64 y
+    float64 z
+    float64 w
+```
+
+
