@@ -2,6 +2,11 @@
 
 - About ROS: http://www.ros.org/about-ros/
 
+## Installation:
+
+- Ubuntu: http://wiki.ros.org/ROS/Installation
+- Raspberry Pi image from Ubiquity Robotics: https://ubiquityrobotics.com/
+
 More information:
 - ROS programming course at ETH, Zürich: http://www.rsl.ethz.ch/education-students/lectures/ros.html. Much of the info below is based on the slides from that course.
 
@@ -161,4 +166,33 @@ geometry_msgs/Pose pose
     float64 w
 ```
 
+### ROS Launch (http://wiki.ros.org/roslaunch)
+
+roslaunch is a tool for easily launching multiple ROS nodes locally and remotely via SSH, as well as setting parameters on the Parameter Server. It includes options to automatically respawn processes that have already died. roslaunch takes in one or more XML configuration files (with the .launch extension) that specify the parameters to set and nodes to launch, as well as the machines that they should be run on.
+
+- *launch* is a tool for launching multiple node and setting parameters on the parameter server
+- Are written as XML-files with suffix `*.launch`
+
+Start a local launch file
+```bash 
+roslaunch file_name.launch
+```
+
+Start a launch file located in a package:
+```bash
+roslauch package_name file_name.launch
+```
+
+```xml
+<launch>
+    <node name="listener" pkg="rospy_tutorials" type="listener" output="screen"/>
+    <node name="talker" pkg="rospy_tutorials" type="talker" output="screen"/>
+<launch/>
+```
+
+- `launch`: Root element of the launch file
+- `node`: A node to be launched
+- `name`: Name of the node to be launched
+- `type`: Executable to be launched
+- `output`: Output to console (screen) of logfile (log)
 
