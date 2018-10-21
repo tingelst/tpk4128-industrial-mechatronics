@@ -223,4 +223,8 @@ The system shall consist of one publisher node that grabs images from a webcam, 
 
 An additional task is to encode the image such that other subscribers can read and display the image.
 
-
+Steps:
+1. Check out tutorials at: http://wiki.ros.org/ROS/Tutorials/
+2. Run the publish/subscribe tutorial at: http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber%28python%29
+3. Create a new package named `tpk4128`, following http://wiki.ros.org/ROS/Tutorials/CreatingPackage
+4. Create a package that implements the webcam image publisher and subscriber
