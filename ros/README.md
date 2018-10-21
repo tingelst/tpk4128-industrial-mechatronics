@@ -129,16 +129,34 @@ rostopic pub /topic type args
 `sensor_msgs/Image.msg`:
 
 ```bash
-std_msgs/Header header
-  uint32 seq
-  time stamp
-  string frame_id
-uint32 height
-uint32 width
-string encoding
-uint8 is_bigendian
-uint32 step
-uint8[] data
+# This message contains an uncompressed image
+# (0, 0) is at top-left corner of image
+#
+
+Header header        # Header timestamp should be acquisition time of image
+                     # Header frame_id should be optical frame of camera
+                     # origin of frame should be optical center of camera
+                     # +x should point to the right in the image
+                     # +y should point down in the image
+                     # +z should point into to plane of the image
+                     # If the frame_id here and the frame_id of the CameraInfo
+                     # message associated with the image conflict
+                     # the behavior is undefined
+
+uint32 height         # image height, that is, number of rows
+uint32 width          # image width, that is, number of columns
+
+# The legal values for encoding are in file src/image_encodings.cpp
+# If you want to standardize a new string format, join
+# ros-users@lists.sourceforge.net and send an email proposing a new encoding.
+
+string encoding       # Encoding of pixels -- channel meaning, ordering, size
+                      # taken from the list of strings in include/sensor_msgs/image_encodings.h
+
+uint8 is_bigendian    # is this data bigendian?
+uint32 step           # Full row length in bytes
+uint8[] data          # actual matrix data, size is (step * rows)
+
 ```
 
 `geometry_msgs/Point.msg`:
@@ -195,4 +213,14 @@ roslauch package_name file_name.launch
 - `name`: Name of the node to be launched
 - `type`: Executable to be launched
 - `output`: Output to console (screen) of logfile (log)
+
+## Goal: 
+
+The goals of this lecture is to:
+1. get an introduction to ROS and
+2. build a publish/subscribe ROS system. 
+The system shall consist of one publisher node that grabs images from a webcam, forms a `sensor_msgs/Image.msg` message and publishes it on a topic, and one or more subscriber nodes that subscribes to the image topic and performs some computation on the image. 
+
+An additional task is to encode the image such that other subscribers can read and display the image.
+
 
