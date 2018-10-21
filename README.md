@@ -46,7 +46,7 @@ Introduction to Python programming for the course TPK4128 Industrial Mechatronic
 - Inheritance
 - Composition
 
-## Exercise: Building a webcam server
+## Exercise: Building a webcam server using OpenCV and Python
 
 The task is to build a Python module that implements a socket server that fetches images from a webcam and sends it over a TCP/IP or UDP socket when it gets a request from a client.
 
@@ -58,10 +58,12 @@ The task is to build a Python module that implements a socket server that fetche
     4) Click the "Add filter from device" button (the cable with the '+' icon).
     5) Select your device from the list.
     6) Now click OK and start your VM.
-3) Open a terminal and execute the command `ls /dev`. You should now see `video0` in the output.
+3) Open a terminal and execute the command `ls /dev`. You should now see `video0` in the output. Note that you might need to add the camera manually from the top menu: Devices > Webcams > NameOfYourCamera
 4) Install opencv: `pip install opencv-python`
 5) Implement the `Camera` class in the file `camera_opencv.py`. See https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html for a tutorial on how to open a video stream from a webcam.
 6) Implement the `run_client_opencv.py` script, that sends a message over `localhost` to a server implemented in the `run_server_opencv.py` script.
 7) Open a new terminal and execute the `run_server_opencv.py` script.
 8) Open a new terminal and execute the `run_client_opencv.py` script. You should now see a live stream from your webcam.
 9) If time permits, work together in pairs and try to get the above system to work between two remote machines.
+
+Tip: For an interactive introduction to python, follow the exercises on http://learnpython.org/
