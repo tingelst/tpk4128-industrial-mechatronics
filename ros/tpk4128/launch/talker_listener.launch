@@ -1,4 +1,0 @@
-<launch>
-  <node name="listener" pkg="tpk4128" type="listener.py" output="screen"/>
-  <node name="talker" pkg="tpk4128" type="talker.py" output="screen"/>
-</launch>
