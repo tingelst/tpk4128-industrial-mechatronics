@@ -9,4 +9,8 @@ setup(name='tpk4128',
       author_email='lars.tingelstad@ntnu.no',
       url='https://www.ntnu.no/studier/emner/TPK4128',
       packages=find_packages(),
+      install_requires=[
+          'numpy',
+          'opencv-python',
+      ],
       )
