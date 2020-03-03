@@ -2,6 +2,15 @@
 
 Introduction to Python programming for the course TPK4128 Industrial Mechatronics at the Department of Mechanical and Industrial Engineering, NTNU, Norwegian University of Science and Technology
 
+## Installation
+
+```bash
+mkdir -p ~/tpk4128_ws/src
+cd ~/tpk4128_ws/src
+git clone https://github.com/tingelst/tpk4128-industrial-mechatronics.git
+pip3 install tpk4128-industrial-mechatronics
+```
+
 ## Exercise: Building a webcam server using OpenCV and Python
 
 The task is to build a Python module that implements a socket server that fetches images from a webcam and sends it over a TCP/IP or UDP socket when it gets a request from a client.
