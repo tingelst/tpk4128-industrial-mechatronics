@@ -15,11 +15,16 @@ The task is to build a Python module that implements a socket server that fetche
     5) Select your device from the list.
     6) Now click OK and start your VM.
 3) Open a terminal and execute the command `ls /dev`. You should now see `video0` in the output. Note that you might need to add the camera manually from the top menu: Devices > Webcams > NameOfYourCamera
-4) Install opencv: `pip install opencv-python`
-5) Implement the `Camera` class in the file `camera_opencv.py`. See https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html for a tutorial on how to open a video stream from a webcam.
-6) Implement the `run_client_opencv.py` script, that sends a message over `localhost` to a server implemented in the `run_server_opencv.py` script.
+4) Install the `tpk4128` module (with dependencies):
+```bash
+mkdir -p ~/tpk4128_ws/src
+cd ~/tpk4128_ws/src
+git clone https://github.com/tingelst/tpk4128-industrial-mechatronics.git
+pip3 install ./tpk4128-industrial-mechatronics # Use pip for Python 2
+```
+
+5) Implement the `Camera` class in the file `tpk4128/camera_opencv.py`. See https://docs.opencv.org/3.4/dd/d43/tutorial_py_video_display.html for a tutorial on how to open a video stream from a webcam.
+6) Implement the `scripts/run_client_opencv.py` script, that sends a message over `localhost` to a server implemented in the `scripts/run_server_opencv.py` script.
 7) Open a new terminal and execute the `run_server_opencv.py` script.
 8) Open a new terminal and execute the `run_client_opencv.py` script. You should now see a live stream from your webcam.
 9) If time permits, work together in pairs and try to get the above system to work between two remote machines.
-
-Tip: For an interactive introduction to python, follow the exercises on http://learnpython.org/
