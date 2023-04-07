@@ -1,6 +1,4 @@
-# TPK4128 Industrial Mechatronics
-
-## Preface
+# Preface
 
 Mechatronics is a multidisciplinary field that combines various areas of engineering and computer science to develop intelligent systems. The application of mechatronics in industrial processes, such as manufacturing, automation, robotics, and process control, has led to a significant improvement in productivity, efficiency, and flexibility. The course TPK4128 Industrial Mechatronics at NTNU, Trondheim, Norway, focuses on providing students with the knowledge and skills required to design, program, and implement industrial mechatronics systems.
 
