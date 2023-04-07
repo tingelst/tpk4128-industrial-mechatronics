@@ -42,6 +42,7 @@ In conclusion, the MODBUS protocol is a critical component in many industrial me
 MODBUS TCP is an extension of the MODBUS protocol that operates over Ethernet networks, leveraging the advantages of TCP/IP for communication. In this section, we will discuss the implementation of MODBUS TCP in the C programming language, providing examples for both client (master) and server (slave) devices.
 1.	Prerequisites: To implement MODBUS TCP in C, the libmodbus library is required. This library provides a comprehensive set of functions for implementing MODBUS communication and can be installed on most systems using package managers or by building from source.
 2.	MODBUS TCP Client (Master) Example:
+
 ```c
 #include <stdio.h>
 #include <modbus/modbus.h>
@@ -78,6 +79,7 @@ int main(void) {
 }
 ```
 3.	MODBUS TCP Server (Slave) Example:
+
 ```c
 #include <stdio.h>
 #include <modbus/modbus.h>
