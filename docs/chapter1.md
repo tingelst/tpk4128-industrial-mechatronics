@@ -1,4 +1,5 @@
 # Chapter 1: Introduction - Use of Linux, Intro to Python and C/C++ programming
+
 ## 1.1 Introduction to Industrial Mechatronics
 Industrial mechatronics is a multidisciplinary field that combines mechanical engineering, electrical engineering, computer science, and control engineering. It aims to design, develop, and integrate intelligent systems for various industrial applications, such as manufacturing, automation, robotics, and process control. The primary objective of industrial mechatronics is to enhance productivity, efficiency, and flexibility in industrial processes by incorporating advanced technologies and control strategies.
 The term “mechatronics” was first coined in the 1960s by the Japanese engineer Tetsuro Mori to describe the integration of mechanical and electronic components in a system. Since then, the field has evolved to encompass a wide range of applications and technologies, making it a cornerstone of modern engineering.
