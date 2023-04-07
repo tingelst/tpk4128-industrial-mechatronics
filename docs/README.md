@@ -5,3 +5,4 @@
 4. [Networking - OSI Model, UDP and TCP/IP Socket Programming](Chapter4.md)
 5. [Network Protocols and Industrial Bus Systems - Implementing MODBUS TCP](Chapter5.md)
 6. [Network middleware, serialization, inter-process communication - DDS, Protocol Buffers, MQTT](Chapter6.md)
+7. [Chapter 7: Industry 4.0, Instrumentation, and the Internet of Things (IoT)](Chapter7.md)
