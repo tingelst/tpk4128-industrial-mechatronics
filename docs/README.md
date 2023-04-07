@@ -9,3 +9,5 @@
 7. [Industry 4.0, Instrumentation, and the Internet of Things (IoT)](Chapter7.md)
 8. [OPC Unified Architecture (OPC UA)](Chapter8.md)
 9. [ROS2 (Robot Operating System) - Real-time Robot Control](Chapter9.md)
+10. [Industrial PC and Programmable Logic Controllers (PLC)](Chapter10.md)
+
