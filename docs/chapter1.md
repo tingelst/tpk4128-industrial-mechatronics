@@ -3,7 +3,7 @@
 Industrial mechatronics is a multidisciplinary field that combines mechanical engineering, electrical engineering, computer science, and control engineering. It aims to design, develop, and integrate intelligent systems for various industrial applications, such as manufacturing, automation, robotics, and process control. The primary objective of industrial mechatronics is to enhance productivity, efficiency, and flexibility in industrial processes by incorporating advanced technologies and control strategies.
 The term “mechatronics” was first coined in the 1960s by the Japanese engineer Tetsuro Mori to describe the integration of mechanical and electronic components in a system. Since then, the field has evolved to encompass a wide range of applications and technologies, making it a cornerstone of modern engineering.
 
-Key Elements of Industrial Mechatronics:
+### Key Elements of Industrial Mechatronics:
 
 1.	Mechanical Systems: These include various mechanical components like gears, bearings, motors, and structural elements that form the basis of industrial machinery and equipment.
 2.	Electrical and Electronic Systems: These systems deal with the power distribution, energy conversion, and control of electrical and electronic devices, such as sensors, actuators, and power supplies.
@@ -16,7 +16,7 @@ Industrial mechatronics has found applications in a diverse range of industries,
 ## 1.2 Linux in Industrial Mechatronics
 Linux is a versatile, open-source operating system that has gained widespread acceptance in various industries, including industrial mechatronics. Its adaptability, stability, and cost-effectiveness make it an attractive option for many embedded systems and control applications in industrial settings.
 
-Key Advantages of Linux in Industrial Mechatronics:
+### Key Advantages of Linux in Industrial Mechatronics:
 
 1.	Open-Source Nature: As an open-source operating system, Linux offers a high degree of customization and flexibility. This allows developers to tailor the operating system to suit the specific needs of their industrial mechatronics applications, without being constrained by proprietary software licenses or vendor lock-in.
 2.	Stability and Reliability: Linux has a reputation for being stable and reliable, which is crucial for mission-critical industrial applications. The Linux kernel and its associated components are rigorously tested and continuously improved by a vast community of developers, ensuring that the operating system remains robust and secure.
@@ -35,7 +35,7 @@ In conclusion, the Linux operating system has become a vital component in the fi
 ## 1.3 Python and C/C++ Programming Basics
 Python and C/C++ are versatile, powerful programming languages that are widely used in the field of industrial mechatronics. Both languages offer unique advantages, and understanding their basics is essential for engineers and developers working on mechatronics projects.
 
-Python Basics:
+**Python Basics:**
 
 Python is a high-level, interpreted programming language known for its readability, simplicity, and ease of use. It has a large standard library, extensive third-party libraries, and a vibrant community, making it well-suited for rapid prototyping and development of industrial mechatronics applications.
 
@@ -44,7 +44,7 @@ Python is a high-level, interpreted programming language known for its readabili
 3.	Functions: Python allows users to define reusable functions using the def keyword, which can help modularize and organize code.
 4.	Modules and libraries: Python supports modules, which enable code reuse and organization. A wide range of third-party libraries are available for various applications, such as NumPy for numerical computing and PyModbus for Modbus communication.
 
-C/C++ Basics:
+**C/C++ Basics:**
 
 C and C++ are general-purpose, compiled programming languages that offer low-level access to computer hardware, making them well-suited for industrial mechatronics applications that require high performance and precise control.
 1.	Data types: Both C and C++ provide a range of built-in data types, including integers, floating-point numbers, characters, arrays, and structures.
@@ -52,7 +52,7 @@ C and C++ are general-purpose, compiled programming languages that offer low-lev
 3.	Functions: Functions in C/C++ are defined using the return type, function name, and parameter list. They provide code modularity and reusability.
 4.	Classes and objects (C++ only): C++ is an object-oriented language, offering classes and objects for encapsulation, inheritance, and polymorphism, which can help in designing complex mechatronics systems.
 
-CMake for C/C++:
+**CMake for C/C++:**
 
 CMake is a cross-platform build system that automates the process of building, testing, and packaging software. It simplifies the management of C/C++ projects, especially when targeting multiple platforms or using external libraries.
 1.	CMakeLists.txt: CMake relies on a file called `CMakeLists.txt`, which contains a series of commands that describe the build process, such as setting the target executable, specifying source files, and linking libraries.
